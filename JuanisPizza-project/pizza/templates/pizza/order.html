@@ -1,0 +1,17 @@
+<h1>Ordenar una Pizza</h1>
+<h2>{{ note }}</h2>
+<form action="{% url 'order' %}" method="post">
+    {% csrf_token %}
+    {{ pizzaform }}
+    <input type="submit" value="Ordenar">
+</form>
+
+<br> </br>
+
+Quieres más de una pizza?
+
+<form action="{% url 'pizzas' %}" method="get">
+    {{ multiple_form }}
+    <input type="submit" value="Ordenar Pizzas">
+</form>
+
